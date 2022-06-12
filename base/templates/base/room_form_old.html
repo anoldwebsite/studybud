@@ -1,0 +1,10 @@
+{% extends 'main.html' %} {% block content %}
+<div>
+  <form method="POST" action="">
+    {% csrf_token %} {{form.as_p}}
+    <input type="submit" value="Submit to Create a Room" />
+  </form>
+</div>
+{% endblock content %}
+
+<!-- # form.as_p means: as_p will wrap around a paragrap tag p around every element in the form. -->

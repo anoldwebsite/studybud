@@ -1,0 +1,10 @@
+<!-- This is generic so that we can delete not only room but messages also. -->
+
+{% extends 'main.html' %} {% block content %}
+<form method="POST" action="">
+  {% csrf_token %}
+  <p>Are you sure you want to delete "{{obj}}"?</p>
+  <a href="{{request.META.HTTP_REFERER}}">Go Back</a>
+  <input type="submit" value="confirm" />
+</form>
+{% endblock content %}
